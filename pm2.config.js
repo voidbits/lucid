@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'Tailwind',
-      script: 'tailwindcss -w -i ./styles/app.css -o app/styles/app.css',
+      script: 'npm run build:css',
       ignore_watch: ['.'],
       env: {
         NODE_ENV: 'development',
