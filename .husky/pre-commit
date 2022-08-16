@@ -8,7 +8,7 @@ function xargs-r() {
     echo "$path" | cat - | xargs "$@"
   fi
 }
-git diff --name-only --cached --relative | grep '\.tsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t ts-standard
+git diff --name-only --cached --relative | grep '\.tsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t npx ts-standard
 if [[ $? -ne 0 ]]; then
   echo 'JavaScript Standard Style errors were detected. Aborting commit.'
   exit 1
