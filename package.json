@@ -6,8 +6,9 @@
     "dev": "pm2-dev pm2.config.js",
     "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
-
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@remix-run/node": "^1.6.8",
@@ -17,11 +18,21 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
     "@remix-run/dev": "^1.6.8",
     "@remix-run/eslint-config": "^1.6.8",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.20.0",
     "pm2": "^5.2.0",
     "postcss": "^8.4.16",
